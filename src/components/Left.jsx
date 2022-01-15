@@ -180,7 +180,9 @@ function Left() {
         commentaires. <br />
         <Button />
       </Menu2L>
-      <Menu3L />
+      <Menu3L>
+        <Line style={{ marginTop: '20px' }} />
+      </Menu3L>
       <Menu4L />
     </Container>
   )
