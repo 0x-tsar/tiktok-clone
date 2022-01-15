@@ -313,7 +313,7 @@ function Tags() {
   return (
     <Containerr>
       {tagData.map((item, key) => (
-        <TagStyle>{item}</TagStyle>
+        <TagStyle key={key}>{item}</TagStyle>
       ))}
     </Containerr>
   )
