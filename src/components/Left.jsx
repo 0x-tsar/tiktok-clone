@@ -18,6 +18,8 @@ export const Container = styled.div`
 export const Menu1L = styled.div`
   grid-area: menu1;
   background-color: white;
+  /* padding: 0 20px; */
+
   /* display: flex; */
   /* justify-content: center; */
   /* flex-wrap: nowrap; */
@@ -25,17 +27,28 @@ export const Menu1L = styled.div`
 
 export const Menu2L = styled.div`
   grid-area: menu2;
-  background-color: yellow;
+  background-color: white;
+  padding: 0 20px;
+  color: #bdbdbd;
 `
 
 export const Menu3L = styled.div`
   grid-area: menu3;
-  background-color: purple;
+  background-color: white;
+  padding: 0 20px;
 `
 
 export const Menu4L = styled.div`
   grid-area: menu4;
-  background-color: green;
+  background-color: white;
+  padding: 0 20px;
+`
+
+export const Line = styled.div`
+  width: 100%;
+  background-color: #f2f2f2;
+  height: 2px;
+  margin-bottom: 20px;
 `
 
 function MenuMenu({ name, icon }) {
@@ -45,19 +58,15 @@ function MenuMenu({ name, icon }) {
     margin-left: 20px;
     padding: 2px;
 
-    transform: scale3d(1);
-
     :hover {
       background-color: #efefef;
       border-radius: 5px;
-
-      animation: 'blinker 2s linear infinite';
-
-      @keyframes blinker {
+      /* animation: 'blinker 2s linear infinite'; */
+      /* @keyframes blinker {
         50% {
           opacity: 0.3;
         }
-      }
+      } */
     }
   `
 
@@ -131,6 +140,32 @@ function MenuMenu({ name, icon }) {
   )
 }
 
+function Button() {
+  const doSomething = () => {
+    console.log('working..')
+  }
+
+  const Bt = styled.button`
+    width: 100%;
+    height: 50px;
+    color: #fe2355;
+    font-size: 18px;
+    background-color: white;
+    border: 1.2px solid #fe2355;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px 0;
+    margin-top: 20px;
+    cursor: pointer;
+
+    :hover {
+      background-color: #fe235623;
+    }
+  `
+
+  return <Bt onClick={doSomething}>Connexion</Bt>
+}
+
 function Left() {
   return (
     <Container>
@@ -139,7 +174,12 @@ function Left() {
         <MenuMenu name='Abonnements' icon={1} />
         <MenuMenu name='LIVE' icon={2} />
       </Menu1L>
-      <Menu2L>qq</Menu2L>
+      <Menu2L>
+        <Line />
+        Connecte-toi pour suivre des créateurs, aimer des vidéos et voir les
+        commentaires. <br />
+        <Button />
+      </Menu2L>
       <Menu3L />
       <Menu4L />
     </Container>
