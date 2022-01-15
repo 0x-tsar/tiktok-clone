@@ -7,7 +7,7 @@ export const Container = styled.div`
 
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 150px 150px 300px;
+  grid-template-rows: 150px 150px 400px;
   grid-template-areas:
     'menu1'
     'menu2'
@@ -166,6 +166,159 @@ function Button() {
   return <Bt onClick={doSomething}>Connexion</Bt>
 }
 
+function PanelSuggested() {
+  const Panel = styled.div`
+    width: 100%;
+    height: 100%;
+    background-color: #ffe4c43c;
+
+    display: flex;
+    justify-content: center;
+
+    transition: ease-in-out;
+    transition-duration: 0.2s;
+
+    :hover {
+      /* background-color: black; */
+    }
+  `
+
+  return (
+    <Panel>
+      <SuggestedAccounts />
+    </Panel>
+  )
+}
+
+function SuggestedAccounts() {
+  const accounts = [
+    { id: 'id1', name: 'name1', verified: false, picture: '' },
+    { id: 'id2', name: 'name2', verified: false, picture: '' },
+    { id: 'id3', name: 'name3', verified: false, picture: '' },
+    { id: 'id4', name: 'name4', verified: false, picture: '' },
+    { id: 'id5', name: 'name5', verified: false, picture: '' },
+  ]
+
+  const Profile = styled.div`
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+  `
+
+  const EachProfile = styled.div`
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    margin-bottom: 5px;
+
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+
+    :hover {
+      background-color: #ededed;
+    }
+  `
+
+  return (
+    <Profile>
+      {accounts.map((item, key) => (
+        <EachProfile key={key}>
+          <div
+            style={{
+              width: '35px',
+              height: '35px',
+              borderRadius: '16px',
+              backgroundColor: 'black',
+            }}
+          />
+          <div style={{ marginLeft: '10px' }}>
+            <h4 style={{ margin: 0, padding: 0, fontSize: '15px' }}>
+              {item.id}
+            </h4>
+            <p
+              style={{
+                margin: 0,
+                padding: 0,
+                color: '#bfbfbf',
+                fontSize: '14px',
+              }}
+            >
+              {item.name}
+            </p>
+          </div>
+        </EachProfile>
+      ))}
+      <p
+        style={{
+          padding: 0,
+          color: '#fe2355',
+          fontSize: 13,
+          fontWeight: '600',
+          margin: '10px',
+          cursor: 'pointer',
+        }}
+      >
+        Tout Afficher
+      </p>
+    </Profile>
+  )
+}
+
+function Tags() {
+  const tagData = [
+    'something 1',
+    'something 2',
+    'hi 3',
+    'hello 4',
+    'sup 5',
+    'something 6',
+    'something 7',
+    'something 8',
+    'something 9',
+    'something 10',
+    'something 11',
+  ]
+
+  const Containerr = styled.div`
+    /* width: 100%; */
+    display: flex;
+    flex-wrap: wrap;
+    /* display: flex; */
+  `
+  const TagStyle = styled.div`
+    width: 90px;
+    height: 24px;
+    border: 1px solid #d8d8d8;
+    border-radius: 12px;
+    text-align: center;
+    margin: 4px;
+    font-size: 12px;
+    color: #a5a5a5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+    animation: ease-in-out;
+
+    :hover {
+      background-color: #efefef;
+    }
+  `
+
+  return (
+    <Containerr>
+      {tagData.map((item, key) => (
+        <TagStyle>{item}</TagStyle>
+      ))}
+    </Containerr>
+  )
+}
+
 function Left() {
   return (
     <Container>
@@ -182,8 +335,14 @@ function Left() {
       </Menu2L>
       <Menu3L>
         <Line style={{ marginTop: '20px' }} />
+        <p style={{ color: '#bdbdbd' }}>Comptes suggérés</p>
+        <PanelSuggested />
       </Menu3L>
-      <Menu4L />
+      <Menu4L>
+        <Line />
+        <p style={{ fontSize: '15px' }}>Découvrir</p>
+        <Tags />
+      </Menu4L>
     </Container>
   )
 }
