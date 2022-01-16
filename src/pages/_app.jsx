@@ -17,6 +17,7 @@ export const Container = styled.div`
     'header header'
     'left main';
   background-color: white;
+  overflow-x: hidden;
 `
 
 export const Header = styled.div`
