@@ -26,6 +26,11 @@ export const Header = styled.div`
   /* background-color: white; */
   border-bottom: 2px solid #f2f2f2;
   margin-left: 25px;
+  background-color: white;
+  /* height: 100vh; // make the height equal to 100 view height */
+
+  position: sticky; // See link
+  top: 0; //to make it stick to the top of the screen
 
   /* display: flex; */
   /* padding-top: 15.5px; */
