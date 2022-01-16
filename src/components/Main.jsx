@@ -5,7 +5,7 @@ export const Container = styled.div`
   background-color: purple;
   width: 100%;
   height: min-content;
-  padding: 50px 100px;
+  padding: 10px 100px;
 
   /* display: grid;
   grid-template-columns: 40px 550px 100px;
@@ -14,9 +14,9 @@ export const Container = styled.div`
 `
 
 const EachPost = styled.div`
-  width: 100%;
-  height: 500px;
-  background-color: black;
+  width: 650px;
+  height: 700px;
+  background-color: white;
   margin: 20px;
 `
 
