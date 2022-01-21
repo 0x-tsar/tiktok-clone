@@ -3,21 +3,20 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   background-color: purple;
-  width: 100%;
-  height: min-content;
-  padding: 10px 100px;
-
-  /* display: grid;
-  grid-template-columns: 40px 550px 100px;
-  grid-template-rows: 1fr;
-  grid-template-areas: ''; */
+  grid-area: main;
+  padding: 10px 50px;
 `
 
 const EachPost = styled.div`
-  width: 650px;
-  height: 700px;
-  background-color: white;
+  background-color: #70eaa5;
   margin: 20px;
+
+  display: grid;
+  grid-template-columns: 70px 1fr 150px;
+  grid-template-rows: 100px 650px;
+  grid-template-areas:
+    'left top'
+    'left middle';
 `
 
 function Main() {

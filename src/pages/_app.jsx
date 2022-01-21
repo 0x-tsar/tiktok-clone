@@ -21,20 +21,13 @@ export const Container = styled.div`
 `
 
 export const Header = styled.div`
-  /* width: 100%; */
   grid-area: header;
-  /* background-color: white; */
   border-bottom: 2px solid #f2f2f2;
   margin-left: 25px;
   background-color: white;
 
   position: sticky; // See link
   top: 0; //to make it stick to the top of the screen
-  /* height: 100vh; // make the height equal to 100 view height */
-
-  /* display: flex; */
-  /* padding-top: 15.5px; */
-  /* align-items: center; */
   padding-top: 20px;
 `
 
