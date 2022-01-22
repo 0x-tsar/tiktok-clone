@@ -71,8 +71,6 @@ const Bt = styled.button`
   height: 30px;
   color: ${(props) => (props.flag ? '#fe3255' : 'white')};
   background-color: ${(props) => (props.flag ? 'white' : '#fe2355')};
-  /* background-color: white; */
-  /* color: #fe2355; */
   font-size: 18px;
   border: 1.2px solid #fe2355;
   text-align: center;
@@ -97,8 +95,11 @@ function ChaquePost({ video, flag, setFlag, randomColor }) {
           Someone Cool 🌷
         </small>
         <Div1>
-          <small>#it-was-hard-to-find-these-interesting-videos-to-post</small>
+          <small>#some-science-cool-videos</small>
           <small>#tiktok-makes-no-sense</small>
+          <small>
+            <i> #the-meaning-of-life</i>
+          </small>
           <small>
             <b>#yes</b>
           </small>

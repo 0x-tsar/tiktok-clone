@@ -21,11 +21,6 @@ export const Container = styled.div`
 export const Menu1L = styled.div`
   grid-area: menu1;
   background-color: white;
-  /* padding: 0 20px; */
-
-  /* display: flex; */
-  /* justify-content: center; */
-  /* flex-wrap: nowrap; */
 `
 
 export const Menu2L = styled.div`
@@ -61,6 +56,10 @@ function MenuMenu({ name, icon }) {
     margin-left: 20px;
     padding: 2px;
 
+    :nth-child(1) {
+      margin-top: 5px;
+    }
+
     :hover {
       background-color: #efefef;
       border-radius: 5px;
@@ -79,9 +78,23 @@ function MenuMenu({ name, icon }) {
     align-items: center;
   `
 
+  const url = (num) => {
+    if (num === 1) {
+      return '/home'
+    }
+    if (num === 2) {
+      return '/abonnements'
+    }
+    if (num === 3) {
+      return '/live'
+    }
+
+    return '/'
+  }
+
   return (
     <Div>
-      <A href='/fr'>
+      <A href={url(icon)}>
         <svg
           width='32'
           height='32'
@@ -195,11 +208,11 @@ function PanelSuggested() {
 
 function SuggestedAccounts() {
   const accounts = [
-    { id: 'id1', name: 'name1', verified: false, picture: '' },
-    { id: 'id2', name: 'name2', verified: false, picture: '' },
-    { id: 'id3', name: 'name3', verified: false, picture: '' },
-    { id: 'id4', name: 'name4', verified: false, picture: '' },
-    { id: 'id5', name: 'name5', verified: false, picture: '' },
+    { id: 'tiktoker1', name: 'name1', verified: false, picture: '' },
+    { id: 'tiktoker2', name: 'name2', verified: false, picture: '' },
+    { id: 'tiktoker3', name: 'name3', verified: false, picture: '' },
+    { id: 'tiktoker4', name: 'name4', verified: false, picture: '' },
+    { id: 'tiktoker5', name: 'name5', verified: false, picture: '' },
   ]
 
   const Profile = styled.div`
