@@ -117,7 +117,7 @@ function ChaquePost({ video, flag, setFlag, randomColor }) {
         />
       </LeftComp>
       <RightComp>
-        <Bt onClick={(e) => setFlag(!flag)} flag={flag}>
+        <Bt onClick={() => setFlag(!flag)} flag={flag}>
           {flag ? "S'abonner" : 'Abonné'}
         </Bt>
       </RightComp>

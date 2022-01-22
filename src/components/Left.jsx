@@ -1,4 +1,4 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -262,6 +262,7 @@ function SuggestedAccounts() {
   return (
     <Profile>
       {accounts.map((item, key) => (
+        // eslint-disable-next-line react/no-array-index-key
         <EachProfile key={key}>
           <div
             style={{
@@ -351,6 +352,7 @@ function Tags() {
   return (
     <Containerr>
       {tagData.map((item, key) => (
+        // eslint-disable-next-line react/no-array-index-key
         <TagStyle key={key}>{item}</TagStyle>
       ))}
     </Containerr>

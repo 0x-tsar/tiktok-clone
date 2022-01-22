@@ -6,6 +6,7 @@ import '../../styles/globals.css'
 import styled from 'styled-components'
 import Image from 'next/image'
 import { useState } from 'react'
+import Link from 'next/link'
 import { Provider } from '../context/context'
 import Left from '../components/Left'
 
@@ -99,7 +100,9 @@ function MyApp({ Component, pageProps }) {
             onMouseLeave={(e) => setUnderlined('none')}
             // onMouseLeave={() => setUnderlined('none')}
           >
-            <a href='/'>Téléverser</a>
+            <Link href='/' passHref>
+              Téléverser
+            </Link>
           </div>
         </Header>
         <Left />
