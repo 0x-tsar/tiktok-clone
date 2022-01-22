@@ -183,12 +183,12 @@ function Main() {
         setFlag={setTwo}
         randomColor={c2}
       />
-      {/* <ChaquePost
+      <ChaquePost
         video='./videos/video1.mp4'
         flag={three}
         setFlag={setThree}
         randomColor={c3}
-      /> */}
+      />
     </Container>
   )
 }
