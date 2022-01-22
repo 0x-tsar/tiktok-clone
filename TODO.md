@@ -1,1 +1,3 @@
 - [ ] add database to fetch dummy data for profiles and {posts??}
+- [x] header is with some padding or margin
+- [ ] left bar side is not scrolling til the end

@@ -23,12 +23,13 @@ export const Container = styled.div`
 export const Header = styled.div`
   grid-area: header;
   border-bottom: 2px solid #f2f2f2;
-  margin-left: 25px;
+  /* margin-left: 25px; */
   background-color: white;
 
   position: sticky; // See link
   top: 0; //to make it stick to the top of the screen
   padding-top: 20px;
+  padding-left: 25px;
 `
 
 const Bt = styled.button`

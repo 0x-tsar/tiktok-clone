@@ -5,6 +5,9 @@ import styled from 'styled-components'
 export const Container = styled.div`
   grid-area: left;
 
+  position: sticky; // See link
+  top: 70px; //to make it stick to the top of the screen
+
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 150px 150px 400px;
