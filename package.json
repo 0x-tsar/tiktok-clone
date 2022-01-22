@@ -2,8 +2,7 @@
   "name": "clone-tiktok",
   "private": true,
   "cacheDirectories": [
-    "node_modules/",
-    ".next/cache/"
+    ".next/cache"
   ],
   "scripts": {
     "dev": "next dev",
