@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -86,23 +86,21 @@ const Bt = styled.button`
   }
 `
 
-function ChaquePost({ video, flag, setFlag }) {
+function ChaquePost({ video, flag, setFlag, randomColor }) {
   return (
     <EachPost>
       <TopComp>
         <p style={{ fontWeight: '700', fontSize: '13px' }}>
-          <Link href='/'>shalow_person2000</Link>
+          <Link href='/'>someone_cool2000</Link>
         </p>
         <small style={{ fontWeight: '300', fontSize: '11px' }}>
-          Shalow Person 🌷
+          Someone Cool 🌷
         </small>
         <Div1>
           <small>#it-was-hard-to-find-these-interesting-videos-to-post</small>
           <small>#tiktok-makes-no-sense</small>
-          <small>#boring</small>
-          <small>#regret-cloning-this</small>
           <small>
-            <b>#never again</b>
+            <b>#yes</b>
           </small>
         </Div1>
       </TopComp>
@@ -112,7 +110,7 @@ function ChaquePost({ video, flag, setFlag }) {
             width: '70px',
             height: '70px',
             borderRadius: '35px',
-            backgroundColor: 'black',
+            backgroundColor: randomColor,
             marginTop: '10px',
           }}
         />
@@ -142,11 +140,58 @@ function Main() {
   const [two, setTwo] = useState(false)
   const [three, setThree] = useState(false)
 
+  const [c1, setC1] = useState('')
+  const [c2, setC2] = useState('')
+  const [c3, setC3] = useState('')
+
+  const randomColor = () => {
+    const colors = [
+      '#f22525',
+      '#f28f25',
+      '#253df2',
+      '#d725f2',
+      '#ae25f2',
+      '#25f2a0',
+      '#25c2f2',
+      '#2547f2',
+      '#2fa913',
+      '#954d01',
+      '#25e8f2',
+      '#77f45b',
+      '#ff6b42',
+      '#000000',
+    ]
+
+    const random = Math.floor(Math.random() * colors.length)
+    return colors[random]
+  }
+
+  useEffect(() => {
+    setC1(randomColor())
+    setC2(randomColor())
+    setC3(randomColor())
+  }, [])
+
   return (
     <Container>
-      <ChaquePost video='./videos/video3.mp4' flag={one} setFlag={setOne} />
-      <ChaquePost video='./videos/video2.mp4' flag={two} setFlag={setTwo} />
-      <ChaquePost video='./videos/video1.mp4' flag={three} setFlag={setThree} />
+      <ChaquePost
+        video='./videos/video3.mp4'
+        flag={one}
+        setFlag={setOne}
+        randomColor={c1}
+      />
+      <ChaquePost
+        video='./videos/video2.mp4'
+        flag={two}
+        setFlag={setTwo}
+        randomColor={c2}
+      />
+      <ChaquePost
+        video='./videos/video1.mp4'
+        flag={three}
+        setFlag={setThree}
+        randomColor={c3}
+      />
     </Container>
   )
 }

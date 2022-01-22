@@ -224,6 +224,28 @@ function SuggestedAccounts() {
     }
   `
 
+  const randomColor = () => {
+    const colors = [
+      '#f22525',
+      '#f28f25',
+      '#253df2',
+      '#d725f2',
+      '#ae25f2',
+      '#25f2a0',
+      '#25c2f2',
+      '#2547f2',
+      '#2fa913',
+      '#954d01',
+      '#25e8f2',
+      '#77f45b',
+      '#ff6b42',
+      '#000000',
+    ]
+
+    const random = Math.floor(Math.random() * colors.length)
+    return colors[random]
+  }
+
   return (
     <Profile>
       {accounts.map((item, key) => (
@@ -233,7 +255,7 @@ function SuggestedAccounts() {
               width: '35px',
               height: '35px',
               borderRadius: '16px',
-              backgroundColor: 'black',
+              backgroundColor: randomColor(),
             }}
           />
           <div style={{ marginLeft: '10px' }}>
