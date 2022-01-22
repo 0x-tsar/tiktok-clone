@@ -17,7 +17,7 @@ export const Container = styled.div`
   grid-template-areas:
     'header header'
     'left main';
-  background-color: white;
+  background-color: red;
   overflow-x: hidden;
 `
 

@@ -17,11 +17,11 @@ const EachPost = styled.div`
   margin: 20px;
   width: 700px;
   margin: 20px auto;
-  margin-bottom: 200px;
+  /* margin-bottom: 200px; */
 
   display: grid;
   grid-template-columns: 70px 1fr 150px;
-  grid-template-rows: 100px 650px;
+  grid-template-rows: 100px auto;
   grid-template-areas:
     'left top right'
     'left middle right';
@@ -42,19 +42,16 @@ const TopComp = styled.div`
     margin-right: 10px;
   }
 `
-
 const Div1 = styled.div`
   small {
     font-size: 14px;
     margin: 4px;
   }
 `
-
 const LeftComp = styled.div`
   grid-area: left;
   background-color: white;
 `
-
 const RightComp = styled.div`
   grid-area: right;
   background-color: white;
@@ -65,7 +62,6 @@ const RightComp = styled.div`
 const MiddleComp = styled.div`
   grid: middle;
 `
-
 const Bt = styled.button`
   width: 100px;
   height: 30px;
@@ -187,12 +183,12 @@ function Main() {
         setFlag={setTwo}
         randomColor={c2}
       />
-      <ChaquePost
+      {/* <ChaquePost
         video='./videos/video1.mp4'
         flag={three}
         setFlag={setThree}
         randomColor={c3}
-      />
+      /> */}
     </Container>
   )
 }
