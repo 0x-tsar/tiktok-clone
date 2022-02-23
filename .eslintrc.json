@@ -7,7 +7,14 @@
   ],
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": ["error", { "singleQuote": true }],
+    // "prettier/prettier": ["error", { "singleQuote": true }],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto",
+          "singleQuote": true
+      }
+    ],
 
     "no-unused-vars": "warn",
     "no-console": "off",
