@@ -1,10 +1,11 @@
 import Head from 'next/head'
-// import Image from 'next/image'
-import { useContext } from 'react'
+
 import styled from 'styled-components'
 // import styles from '../../styles/Home.module.css'
 import Main from '../components/Main'
 import { Contexto } from '../context/context'
+// import Image from 'next/image'
+// import { useContext } from 'react'
 
 export const Container = styled.div``
 
