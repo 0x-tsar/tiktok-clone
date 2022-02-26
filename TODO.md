@@ -1,3 +1,3 @@
 - [ ] add database to fetch dummy data for profiles and {posts??}
 - [x] header is with some padding or margin
-- [ ] left bar side is not scrolling til the end
+- [x] left bar side is not scrolling til the end - problem: it's because of an extension Im using to speed up player, so it has nothing to do with the page
